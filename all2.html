@@ -36,8 +36,8 @@
         .outerRadius(innerRadius + 20);
 
     var svg = d3.select("#chart").append("svg")
-        .attr("width", outerRadius * 2)
-        .attr("height", outerRadius * 2)
+        .attr("viewBox", "0 0 " + (outerRadius * 2) + " " + (outerRadius * 2))
+        .attr("preserveAspectRatio", "xMidYMid meet")
         .append("g")
         .attr("transform", "translate(" + outerRadius + "," + outerRadius + ")");
 

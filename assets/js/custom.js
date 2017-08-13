@@ -12,6 +12,25 @@
 
 	$(window).load(function() {
 		$('.page-loader').delay(350).fadeOut('slow');
+    console.log("loaded");
+    $('.svg-container').each(function(){
+      var container = $(this);
+
+      var svg = container.find('svg')[0];
+
+      var svg_width = svg.getAttributeNS(null, 'width');
+      var svg_height = svg.getAttributeNS(null, 'height');
+
+      svg.removeAttributeNS(null, 'width');
+      svg.removeAttributeNS(null, 'height');
+      svg.removeAttributeNS(null, 'preserveAspectRatio');
+			svg.removeAttributeNS(null, 'viewBox');
+			svg.removeAttributeNS(null, 'style');
+
+      svg.setAttributeNS(null, 'viewBox', '0 0 ' + parseFloat(svg_width) + ' ' + parseFloat(svg_height));
+      svg.setAttributeNS(null, 'preserveAspectRatio', 'xMidYMid meet');
+
+    });
 	});
 
 	$(document).ready(function() {
