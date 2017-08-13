@@ -1,51 +1,8 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<style>
-
-    body {
-        font-size: 12px;
-        font-family: 'Open Sans', sans-serif;
-        top: 0px;
-        right:0px;
-        left:0px;
-        bottom: 0px;
-        width: 99%;
-    }
-
-    .chord {
-        fill-opacity: .67;
-    }
-
-    svg {
-        pointer-events: all;
-    }
-
-    path.fade {
-        display: none;
-    }
-
-
-    #title {
-        font-size: 20px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-
-    #logo img {
-        position: fixed;
-        right: 30px;
-        bottom: 50px;
-        width: 200px;
-    }
-
-    #tos {
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-        width: 400px;
-    }
-
-</style>
+<head>
+  <meta charset="utf-8">
+  <link href="assets/css/custom.css" rel="stylesheet">
+</head>
 <body>
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
 <script src="https://d3js.org/d3.v3.min.js"></script>
@@ -54,9 +11,6 @@
 <script src="../assets/js/sortprovinces.js"></script>
 <div id="title"  align="center" >文化</div>
 <div id="chart"  align="center" ></div>
-<div id="logo"><a href="../culture.html">English</a> &nbsp;&nbsp; 简体中文<img src="../assets/ash-logo.png"/>
-</div>
-<div id="tos"> &copy; 2017 This graph is made by <a href="ceoas.oregonstate.edu/profile/zhao/" target="_blank">Bo Zhao</a> from Oregon State University.</div>
 
 <script>
     var total = 0;
@@ -94,8 +48,8 @@
         .outerRadius(innerRadius + 20);
 
     var svg = d3.select("#chart").append("svg")
-        .attr("width", outerRadius * 2)
-        .attr("height", outerRadius * 2)
+        .attr("viewBox", "0 0 " + (outerRadius * 2) + " " + (outerRadius * 2))
+        .attr("preserveAspectRatio", "xMidYMid meet")
         .append("g")
         .attr("transform", "translate(" + outerRadius + "," + outerRadius + ")");
 
