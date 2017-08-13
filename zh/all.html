@@ -33,24 +33,10 @@
     };
 
     var outerRadius = window.outerWidth / 3;
-    if(window.innerWidth < 500){
-      viewBoxLeft = -50;
-      viewBoxTop = -100;
-      viewBoxBottom = (outerRadius * 2) + 100;
-      viewBoxRight = (outerRadius * 2) + 100;
-    }
-    else if(window.innerWidth < 800){
-      viewBoxLeft = -25;
-      viewBoxTop = -50;
-      viewBoxBottom = (outerRadius * 2) + 50;
-      viewBoxRight = (outerRadius * 2) + 50;
-    }
-    else{
-      viewBoxLeft = 0;
-      viewBoxTop = 0;
-      viewBoxBottom = (outerRadius * 2);
-      viewBoxRight = (outerRadius * 2);
-    }
+    viewBoxLeft = -60;
+    viewBoxTop = -60;
+    viewBoxBottom = (outerRadius * 2) + 120;
+    viewBoxRight = (outerRadius * 2) + 120;
 
     var innerRadius = outerRadius * 0.8 ;
 
