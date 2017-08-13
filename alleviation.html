@@ -23,8 +23,27 @@
         return str.charAt(0).toUpperCase()+str.slice(1);
     };
 
-    var outerRadius = window.outerWidth / 3,
-        innerRadius = outerRadius * 0.8 ;
+    var outerRadius = window.innerWidth / 3;
+    if(window.innerWidth < 500){
+      viewBoxLeft = -50;
+      viewBoxTop = -100;
+      viewBoxBottom = (outerRadius * 2) + 100;
+      viewBoxRight = (outerRadius * 2) + 100;
+    }
+    else if(window.innerWidth < 800){
+      viewBoxLeft = -20;
+      viewBoxTop = -50;
+      viewBoxBottom = (outerRadius * 2) + 50;
+      viewBoxRight = (outerRadius * 2) + 50;
+    }
+    else{
+      viewBoxLeft = 0;
+      viewBoxTop = 0;
+      viewBoxBottom = (outerRadius * 2);
+      viewBoxRight = (outerRadius * 2);
+    }
+
+    var innerRadius = outerRadius * 0.8 ;
 
     // var fill = d3.scale.category20c();
 
@@ -38,7 +57,7 @@
         .outerRadius(innerRadius + 20);
 
     var svg = d3.select("#chart").append("svg")
-        .attr("viewBox", "0 0 " + (outerRadius * 2) + " " + (outerRadius * 2))
+        .attr("viewBox", "" + viewBoxLeft + " " + viewBoxTop + " " + viewBoxRight + " " + viewBoxBottom)
         .attr("preserveAspectRatio", "xMidYMid meet")
         .append("g")
         .attr("transform", "translate(" + outerRadius + "," + outerRadius + ")");
