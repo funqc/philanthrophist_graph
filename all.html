@@ -3,56 +3,6 @@
   <meta charset="utf-8">
   <link href="assets/css/custom.css" rel="stylesheet">
 </head>
-<meta charset="utf-8">
-<style>
-
-    body {
-        font-size: 12px;
-        font-family: 'Open Sans', sans-serif;
-        top: 0px;
-        right:0px;
-        left:0px;
-        bottom: 0px;
-        width: 99%;
-    }
-
-    .chord {
-        fill-opacity: .67;
-    }
-
-    svg {
-        pointer-events: all;
-    }
-    #circle circle {
-      fill: none;
-      pointer-events: all;
-    }
-
-    #circle:hover path.fade {
-        display: none;
-    }
-
-    #title {
-        font-size: 20px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-
-    #logo img {
-        position: fixed;
-        right: 30px;
-        bottom: 50px;
-        width: 200px;
-    }
-
-    #tos {
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-        width: 400px;
-    }
-
-</style>
 <body>
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
 <script src="https://d3js.org/d3.v3.min.js"></script>
@@ -573,8 +523,8 @@ function reprovinces(provinces) {
             .data(layout.groups)
             .enter().append("g")
             .attr("class", "group")
-            .on("mouseover", mouseover);
-            // .on("mouseout", mouseout);
+            .on("mouseover", mouseover)
+            .on("mouseout", mouseout);
 
         var groupPath = g.append("path")
             .style("fill", function(d) { return fill(d.index); })
