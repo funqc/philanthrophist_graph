@@ -17,10 +17,18 @@ svg {
     pointer-events: all;
 }
 
+#circle circle {
+  fill: none;
+  pointer-events: all;
+}
+
 path.fade {
     display: none;
 }
 
+#circle:hover path.fade {
+  display: none;
+}
 
 #title {
     font-size: 20px;
