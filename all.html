@@ -586,7 +586,7 @@ function reprovinces(provinces) {
         function mouseout(d, i) {
           var m = d3.mouse(this);
           if (Math.sqrt(Math.pow(m[0],2) + Math.pow(m[1],2)) > innerRadius + 20){
-            chords.classed("fade", false);
+            chord.classed("fade", false);
           }
         }
 
