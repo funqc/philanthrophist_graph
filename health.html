@@ -29,7 +29,7 @@
     viewBoxBottom = (outerRadius * 2) + 120;
     viewBoxRight = (outerRadius * 2) + 120;
 
-    var innerRadius = outerRadius * 0.68 ;
+        var innerRadius = outerRadius * 0.68 ;
 
     // var fill = d3.scale.category20c();
 
@@ -43,7 +43,7 @@
         .outerRadius(innerRadius + 20);
 
     var svg = d3.select("#chart").append("svg")
-        .attr("viewBox", "" + viewBoxLeft + " " + viewBoxTop + " " + viewBoxRight + " " + viewBoxBottom)
+.attr("viewBox", "" + viewBoxLeft + " " + viewBoxTop + " " + viewBoxRight + " " + viewBoxBottom)
         .attr("preserveAspectRatio", "xMidYMid meet")
         .append("g")
         .attr("transform", "translate(" + outerRadius + "," + outerRadius + ")");

@@ -445,8 +445,14 @@ function unique(arr) {
         return str.charAt(0).toUpperCase()+str.slice(1);
     };
 
-    var outerRadius = window.outerWidth / 3,
-        innerRadius = outerRadius * 0.68 ;
+    var outerRadius = window.outerWidth / 3;
+    var viewBoxLeft = -60;
+    var viewBoxTop = -60;
+    var viewBoxBottom = (outerRadius * 2) + 120;
+    var viewBoxRight = (outerRadius * 2) + 120;
+
+    var innerRadius = outerRadius * 0.68 ;
+
 
     // var fill = d3.scale.category20c();
 
@@ -460,8 +466,8 @@ function unique(arr) {
         .outerRadius(innerRadius + 20);
 
     var svg = d3.select("#chart").append("svg")
-        .attr("width", outerRadius * 2)
-        .attr("height", outerRadius * 2)
+        .attr("viewBox", "" + viewBoxLeft + " " + viewBoxTop + " " + viewBoxRight + " " + viewBoxBottom)
+        .attr("preserveAspectRatio", "xMidYMid meet")
         .append("g")
         .attr("transform", "translate(" + outerRadius + "," + outerRadius + ")");
 

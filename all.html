@@ -379,7 +379,7 @@ function reprovinces(provinces) {
     viewBoxBottom = (outerRadius * 2) + 120;
     viewBoxRight = (outerRadius * 2) + 120;
 
-    var innerRadius = outerRadius * 0.8 ;
+        var innerRadius = outerRadius * 0.8 ;
 
     // var fill = d3.scale.category20c();
     var arc = d3.svg.arc()
@@ -400,7 +400,7 @@ function reprovinces(provinces) {
 
 
     var svg = d3.select("#chart").append("svg")
-        .attr("viewBox", "" + viewBoxLeft + " " + viewBoxTop + " " + viewBoxRight + " " + viewBoxBottom)
+.attr("viewBox", "" + viewBoxLeft + " " + viewBoxTop + " " + viewBoxRight + " " + viewBoxBottom)
         .attr("preserveAspectRatio", "xMidYMid meet")
         .append("g")
         .attr('id', 'circle')

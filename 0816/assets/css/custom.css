@@ -22,10 +22,6 @@ svg {
   pointer-events: all;
 }
 
-path.fade {
-    display: none;
-}
-
 #circle:hover path.fade {
   display: none;
 }
