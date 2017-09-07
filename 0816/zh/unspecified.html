@@ -408,7 +408,7 @@ function reprovinces(provinces) {
     svg.append("circle")
         .attr("r", innerRadius*1.09);
 
-    d3.json("../assets/upspecified.json", function(error, items) {
+    d3.json("../assets/unspecified.json", function(error, items) {
         if (error) throw error;
 
         var indexByName = d3.map(),
