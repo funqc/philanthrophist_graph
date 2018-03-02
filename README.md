@@ -1,3 +1,3 @@
 # philanthrophist_graph
 
-http://geoviz.ceoas.oregonstate.edu/philanthrophist_graph/
+http://funqc.github.io/philanthrophist_graph/
